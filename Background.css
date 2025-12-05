@@ -1,0 +1,93 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(Ganyunew.png);
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Georgia, 'Times New Roman', Times, serif; /* Minecraft-like blocky font */
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a cool shadow for emphasis */
+        }
+        /* LINK BOXES */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  width: min(720px, 90%); /* maksimal lebarnya, responsive */
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* kotak link utama */
+.link-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.06); /* subtle glass */
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 140ms ease, background 140ms ease, box-shadow 140ms ease;
+  backdrop-filter: blur(4px);
+}
+
+/* ikon kiri */
+.link-box .box-left {
+  flex: 0 0 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* teks tengah */
+.link-box .box-center {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.link-box .title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.6px;
+}
+.link-box .subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* panah kanan */
+.link-box .box-right {
+  flex: 0 0 28px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* hover / fokus */
+.link-box:hover, .link-box:focus {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  outline: none;
+}
+
+/* small screens */
+@media (max-width: 480px) {
+  .link-box .box-left { flex: 0 0 44px; height: 44px; font-size: 18px; }
+  .link-box { padding: 12px; gap: 12px; border-radius: 10px; }
+  h1 { font-size: 2.4em; margin-bottom: 18px; }
+}
